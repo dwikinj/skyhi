@@ -22,6 +22,8 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/accounts/settings/',[HomeController::class,'showAccountPage'])->name('profile.settings');
     Route::post('/accounts/settings/',[HomeController::class,'updateAccount'])->name('profile.update');
+    Route::get('/get-user', [HomeController::class, 'getUser'])->name('getUser');
+
 
 });
 

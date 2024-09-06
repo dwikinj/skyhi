@@ -53,7 +53,7 @@ class HomeController extends Controller
             // Generate random name
             $randomName = Str::random(10) . '.' . $image->getClientOriginalExtension();
             // Define the path
-            $destinationPath = 'public/assets/images/';
+            $destinationPath = 'assets/images/';
             
             // Delete old image if exists
             if ($user->profile_image && file_exists(public_path($user->profile_image))) {
@@ -74,5 +74,17 @@ class HomeController extends Controller
     
         $user->update($validatedData);
         return redirect()->back()->with('success', 'Profile updated successfully');
+    }
+
+    public function getUser(Request $request) {
+        $userId = $request->input('id');
+
+        if ($userId) {
+            $user = User::findOrFail($userId);
+        } else {
+            $user = Auth::user();
+        }
+
+        return response()->json($user);
     }
 }

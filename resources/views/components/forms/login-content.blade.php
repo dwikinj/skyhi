@@ -1,6 +1,6 @@
 <div class="text-white flex xl:my-20 xl:mx-12 2l:my-20 2l:mx-12 lg:my-20 lg:mx-12 my-10 mx-10">
     <div class="xl:w-[516px] space-y-4">
-        <h1 class="text-[24px] font-semibold">Welcome to SkHi - Seamless Video Communication</h1>
+        <h1 class="text-[24px] font-semibold">Welcome to SkyHi - Seamless Video Communication</h1>
         <p class="text-[14px]">At SkyHi, we bring you closer to the people who matter most with our high-quality video
             and audio technology. Connect instantly with our user-friendly interface and enjoy secure, private
             conversations.</p>

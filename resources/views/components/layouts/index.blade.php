@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="min-h-screen w-full bg-[#00FFB3] flex items-center justify-center">
+    <div class="min-h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: url('/assets/bg-beach.jpg');">
         <div
             class="lg:w-[1200px] lg:h-[800px] 2xl:w-[1200px] 2xl:h-[800px] xl:w-[1200px] xl:h-[800px] bg-[#0F121C] my-3 flex justify-between shadow-lg rounded overflow-hidden xl:flex-row 2xl:flex-row lg:flex-row flex-col">
             @yield('content')

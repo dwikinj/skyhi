@@ -12,10 +12,17 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    @vite('resources/js/app.js')
+
+    <script>
+        const authId = "{{$auth->id}}";
+    </script>
 </head>
 
 <body>
-    <div class="min-h-screen w-full bg-[#00FFB3] flex items-center justify-center">
+    @include('components.call-popup')
+
+    <div class="min-h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: url('/assets/bg-beach.jpg');">
         <div
             class="lg:w-[1200px] lg:h-[800px] 2xl:w-[1200px] 2xl:h-[800px] xl:w-[1200px] xl:h-[800px] my-2 bg-[#0F121C] shadow-lg rounded overflow-hidden flex flex-col">
             <div class="bg-[#404749] h-[40px] flex justify-between items-center">
@@ -25,15 +32,14 @@
                             class="fa-solid fa-circle"></i></span></a>
             </div>
 
-            <!-- Video container here -->
-            <!-- User list here -->
+            @include('components.video-container')
             @include('components.user-list')
-
             @include('components.user-footer')
         </div>
     </div>
     <!-- Scripts here -->
     <script src="{{ asset('assets/js/search.js') }}"></script>
+    <script src="{{ asset('assets/js/call.js') }}"></script>
 </body>
 
 </html>
